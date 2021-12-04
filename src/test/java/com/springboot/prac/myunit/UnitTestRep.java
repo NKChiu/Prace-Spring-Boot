@@ -1,10 +1,12 @@
 package com.springboot.prac.myunit;
 
 import com.google.gson.Gson;
+import com.querydsl.core.BooleanBuilder;
 import com.springboot.prac.PracApplication;
 import com.springboot.prac.config.TestDataSourceConfig;
 import com.springboot.prac.testap.dao.TestTableEbt1Spec;
 import com.springboot.prac.testap.dao.TestTableEnt1Dao;
+import com.springboot.prac.testap.entity.QTestTableEnt1;
 import com.springboot.prac.testap.entity.TestTableEnt1;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -60,6 +62,15 @@ public class UnitTestRep {
         System.out.println(new Gson().toJson(list));
     }
 
+    @Test
+    public void testRepUseQdsl(){
+        QTestTableEnt1 qTestTableEnt1 = QTestTableEnt1.testTableEnt1;
+        BooleanBuilder builder = new BooleanBuilder();
+        builder = builder.and(qTestTableEnt1.var1
+                .in(Arrays.asList("variable1-1", "variable2-1")));
+        Iterable<TestTableEnt1> list = testTableEnt1Dao.findAll(builder);
+        System.out.println(new Gson().toJson(list));
+    }
 
     /***************************************************** private ********************************************************************************/
 
