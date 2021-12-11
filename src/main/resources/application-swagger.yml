@@ -1,0 +1,12 @@
+#include swagger yml
+swagger-conf:
+  name: testApi
+  api:
+    title: TestApi
+    version: 1.0.0
+    description: I'm Description
+    base-package: com.springboot.prac.testap.controller
+    contact-name: kenny.chiu
+    contact-email: nkchiu418@gmail.com
+    swagger:
+      enable: true

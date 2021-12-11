@@ -6,4 +6,5 @@ spring:
     name: practice-springboot
 # default profile will be h2
   profiles:
+    include: swagger
     active: h2
