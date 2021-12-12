@@ -1,4 +1,6 @@
 server:
+  servlet:
+    context-path: /pracSPB
   port: 8089
 
 spring:
