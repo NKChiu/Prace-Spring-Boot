@@ -1,6 +1,7 @@
 server:
   servlet:
     context-path: /pracSPB
+#  server.port 可以透過 db 的 PROPERTIES_CONFIG 取得 (h2 db 無法使用)
   port: 8089
 
 spring:
