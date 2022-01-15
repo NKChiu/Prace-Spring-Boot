@@ -66,7 +66,8 @@ public class SwaggerConfig {
         return or(
                 regex("/api/add.*"),
                 regex("/api/update.*"),
-                regex("/api/delete.*") );
+                regex("/api/delete.*"),
+                regex("/api/test.*") );
     }
 
     private Predicate<String> getPaths() {
