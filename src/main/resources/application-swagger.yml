@@ -5,7 +5,7 @@ swagger-conf:
     title: TestApi
     version: 1.0.0
     description: I'm Description
-    base-package: com.springboot.prac.testap.controller
+    base-package: com.springboot.prac
     contact-name: kenny.chiu
     contact-email: nkchiu418@gmail.com
     swagger:
