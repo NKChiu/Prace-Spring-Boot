@@ -31,10 +31,6 @@ public class TestEmailController {
     @Value("${mail.send.address}")
     private String sendAddress;
 
-    @GetMapping("/getxxx")
-    public String getxxxx(){
-        return "getxxx";
-    }
 
     @PostMapping("/testEmail/sendMailTest")
     public OutputDto sendMailTest(@ApiParam(value = "附件") @RequestParam(value = "file", required = false)MultipartFile file,
